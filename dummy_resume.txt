@@ -1,0 +1,24 @@
+John Doe
+Email: john.doe@example.com
+Phone: (555) 123-4567
+
+Objective:
+Experienced Software Engineer looking for a challenging role in building scalable web applications.
+
+Skills:
+- JavaScript, React, Node.js
+- Python, Django, FastAPI
+- Docker, Kubernetes, AWS
+- SQL, NoSQL
+
+Experience:
+Senior Software Engineer at TechCorp (2020 - Present)
+- Developed and maintained microservices using FastAPI and Docker.
+- Improved application performance by 30%.
+
+Software Developer at WebSolutions (2017 - 2020)
+- Built user interfaces using React and Redux.
+- Collaborated with designers to create intuitive user experiences.
+
+Education:
+B.S. in Computer Science, University of Technology (2013 - 2017)
