@@ -2,7 +2,7 @@
 
 An AI-powered platform for recruiters to upload, parse, and rank resumes against job descriptions using NLP and semantic similarity.
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 - Docker & Docker Compose
@@ -22,7 +22,7 @@ docker-compose up --build
 
 ---
 
-## 🧪 Testing
+## Testing
 
 ### Backend (Spring Boot)
 Unit and integration tests are located in `backend/src/test`.
@@ -46,7 +46,7 @@ pytest
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 - **Frontend**: React (Vite), Tailwind CSS, Lucide icons, Recharts for analytics.
 - **Backend**: Spring Boot, Spring Data JPA, REST API.
 - **AI Service**: FastAPI, PyMuPDF (text extraction), Sentence-Transformers (semantic matching).
