@@ -28,14 +28,17 @@ services:
     healthCheckPath: /actuator/health
     envVars:
       - key: DATABASE_URL
-        fromService: recruitai-db
-        fromProperty: connectionString
+        fromDatabase:
+          name: recruitai-db
+          property: connectionString
       - key: DATABASE_USERNAME
-        fromService: recruitai-db
-        fromProperty: username
+        fromDatabase:
+          name: recruitai-db
+          property: user
       - key: DATABASE_PASSWORD
-        fromService: recruitai-db
-        fromProperty: password
+        fromDatabase:
+          name: recruitai-db
+          property: password
       - key: REDIS_URL
         fromService: recruitai-redis
         fromProperty: connectionString
@@ -53,24 +56,26 @@ services:
     healthCheckPath: /health
     envVars:
       - key: DATABASE_URL
-        fromService: recruitai-db
-        fromProperty: connectionString
+        fromDatabase:
+          name: recruitai-db
+          property: connectionString
       - key: DATABASE_USERNAME
-        fromService: recruitai-db
-        fromProperty: username
+        fromDatabase:
+          name: recruitai-db
+          property: user
       - key: DATABASE_PASSWORD
-        fromService: recruitai-db
-        fromProperty: password
+        fromDatabase:
+          name: recruitai-db
+          property: password
       - key: REDIS_URL
         fromService: recruitai-redis
         fromProperty: connectionString
 
-  # ---------- Managed MySQL ----------
-  - type: postgres
-    name: recruitai-db
-    plan: starter
-
   # ---------- Managed Redis ----------
   - type: redis
     name: recruitai-redis
+    plan: starter
+
+databases:
+  - name: recruitai-db
     plan: starter
