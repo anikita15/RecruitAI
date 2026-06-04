@@ -1,8 +1,8 @@
 services:
   # ---------- Frontend ----------
-  - type: static
+  - type: web
     name: recruitai-frontend
-    env: node
+    runtime: static
     buildCommand: cd frontend && npm ci && npm run build
     staticPublishPath: frontend/dist
     pullRequestPreviews: true
