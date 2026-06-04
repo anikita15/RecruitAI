@@ -39,8 +39,10 @@ services:
           name: recruitai-db
           property: password
       - key: REDIS_URL
-        fromService: recruitai-redis
-        fromProperty: connectionString
+        fromService:
+          name: recruitai-redis
+          type: redis
+          property: connectionString
       - key: AI_SERVICE_URL
         value: https://recruitai-ai.onrender.com
       - key: CORS_ALLOWED_ORIGINS
@@ -67,8 +69,10 @@ services:
           name: recruitai-db
           property: password
       - key: REDIS_URL
-        fromService: recruitai-redis
-        fromProperty: connectionString
+        fromService:
+          name: recruitai-redis
+          type: redis
+          property: connectionString
 
   # ---------- Managed Redis ----------
   - type: redis
